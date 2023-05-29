@@ -1,3 +1,3 @@
 import { monotonicFactory } from "ulid";
 
-export default (time = Date.parse()) => monotonicFactory(time);
+export default (time) => monotonicFactory(time || Date.now());

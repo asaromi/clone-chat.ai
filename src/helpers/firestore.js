@@ -1,4 +1,4 @@
-import app from "firebase/app";
+import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const {
@@ -11,7 +11,7 @@ const {
   VUE_APP_FB_MEASUREMENTID: measurementId,
 } = process.env;
 
-app.initializeApp({
+initializeApp({
   apiKey,
   authDomain,
   projectId,
@@ -21,4 +21,4 @@ app.initializeApp({
   measurementId,
 });
 
-export default getFirestore(app);
+export default getFirestore();
