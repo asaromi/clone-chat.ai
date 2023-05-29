@@ -11,6 +11,14 @@ export default {
   components: {
     HelloWorld,
   },
+  beforeCreate() {
+    let password = prompt("Passwordnya:");
+
+    if (password !== "loveyou") {
+      alert("Password salah!");
+      this.$destroy();
+    }
+  },
 };
 </script>
 
